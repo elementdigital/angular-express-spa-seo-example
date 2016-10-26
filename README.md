@@ -8,4 +8,5 @@ express
 ejs
 
 npm install
+
 npm start
