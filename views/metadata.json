@@ -1,0 +1,48 @@
+{
+    "views": {
+		"home": {
+			"activetab": "home",
+            "metadata": {
+                "name": "home",
+				"title": "Home",
+			    "description": "Home Page Description - 2JSON2",
+			    "keywords": "home,key,words,here,in,a,coma,delimited,string",
+			    "robots": "index, follow",
+			    "pragma": "cache"
+            }
+        },
+        "profile": {
+			"activetab": "profile",
+            "metadata": {
+                "name": "profile",
+				"title": "Profile",
+			    "description": "Profile Page Description - 2JSON2",
+			    "keywords": "profile,key,words,here,in,a,coma,delimited,string",
+			    "robots": "index, follow",
+			    "pragma": "cache"
+            }
+        },
+        "another": {
+			"activetab": "another",
+            "metadata": {
+                "name": "another",
+				"title": "Another",
+			    "description": "another Page Description - 2JSON2",
+			    "keywords": "another,key,words,here,in,a,coma,delimited,string",
+			    "robots": "index, follow",
+			    "pragma": "cache"
+            }
+        },
+        "error": {
+			"activetab": "error",
+            "metadata": {
+                "name": "error",
+				"title": "Error",
+			    "description": "error Page Description - 2JSON2",
+			    "keywords": "error,key,words,here,in,a,coma,delimited,string",
+			    "robots": "noindex, nofollow",
+			    "pragma": "cache"
+            }
+        }
+    }
+}

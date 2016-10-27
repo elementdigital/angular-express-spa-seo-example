@@ -1,0 +1,32 @@
+<div class="navbar">
+	<ul class="navbar-nav">
+		<li ng-class="{active: activeTab == 'home' || activeTab == '/'}"><a href="/">Home</a></li>
+		<li ng-class="{active: activeTab == 'profile'}"><a href="/profile">Profile</a></li>
+		<li ng-class="{active: activeTab == 'another'}"><a href="/another">Another</a></li>
+		<li ng-class="{active: activeTab == '404'}"><a href="/pagenotfound">404</a></li>
+	</ul>
+</div>
+
+
+<div class="content-head">
+	<h1>Angular SPA SEO Example</h1>
+	<h3>Angular Single Page Application SEO Example</h3>
+</div>
+
+<div class="content-body">
+
+<div>
+	<p>We want our single page application to look like a multi page web site to search engines, with each view providing it's own indexable metadata.</p>
+	<p>We also want to use standard url format for links that can be indexed in search engines and provid platform mobility as well as backwards compatability with existing search index links, "http://mysite/profile" instead of "http://mysite/#profile".</p>
+
+	<p>Starting here <a href="http://bnlconsulting.com/blog/dynamic-metadata-in-angularjs">dynamic-metadata-in-angularjs</a>, the metaproperty directive is perfect for changing metadata within our application when views change on the client, which is good for bookmarking and link sharing, but when it comes to search indexing what matters is the initial meta properties of the HTML document even before the page renders in a browser, so we need a server side solution as well.</p>
+
+	<p>In this example I use Express and EJS to demonstrate the basic server side logic then JSON as a common source for our metadata that is shared between the client side view change handler and the server http request hander.</p>
+
+	<p>In theory most web bots will create a new http request when following non-hash links, this triggers our server side handeling, so the web bot would see a normal HTML document with a complete head section containing the view specific meta tags that we choose to assign to each view; title, description, keywords, cache-controls, ogtags, or whatever your application requires.</p>
+
+	<p>As a bonus refresh button clears the current application state while refreshing the current view state.</p>
+
+</div>
+
+</div>
