@@ -88,11 +88,7 @@ angular.module('sampleApp', [
   	console.log("main controller");
 
   	$scope.$route = $route;
-  	$scope.$on("$routeChangeSuccess", function(event, current, previous){
-    	$scope.activeTab = $route.current.activetab;
+  		$scope.$on("$routeChangeSuccess", function(event, current, previous){
+    		$scope.activeTab = $route.current.activetab;
   	});
-  	$scope.isCollapsed;
-  	$scope.NavBarCtrl = function(){
-    	$scope.isCollapsed = true;
-  	};
 })
