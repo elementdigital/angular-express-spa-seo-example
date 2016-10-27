@@ -3,6 +3,6 @@
 dependancies:
 angular, angular-route, express, ejs
 
-'''npm install'''
+```npm install```
 
-'''npm start'''
+```npm start```
