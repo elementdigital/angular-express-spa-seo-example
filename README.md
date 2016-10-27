@@ -1,9 +1,8 @@
 ## Angular, Express, EJS, Single Page Application SEO Example.
 
-dependancies:
+#### dependancies:
 
 angular, angular-route, express, ejs
 
-```npm install```
-
-```npm start```
+#### run:
+```npm install```, ```npm start```
