@@ -5,6 +5,7 @@ angular.module('sampleApp', [
   'sampleApp.error',
   'sampleApp.home',
   'sampleApp.profile',
+  'sampleApp.another',
 ])
 .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 
@@ -39,16 +40,17 @@ angular.module('sampleApp', [
 	// Set custom options or use provided fallback (default) options
 	self.loadMetadata = function(newRoute) {
 		var data = $http({url: 'views/metadata.json', method: 'GET'})
-		.success(function(data,status){
-			var metadata = data.views[newRoute.activetab].metadata;
+		.then(function (success){
+			var metadata = success.data.views[newRoute.activetab].metadata;
+			console.log(metadata);
 			self.title = document.title = metadata.title || 'title here';
 	   		self.description = metadata.description || 'description here';
 	   		self.keywords = metadata.keywords || 'keywords here';
 	   		self.pragma = metadata.pragma || 'cache';
 	   		self.robots = metadata.robots || 'index,follow';
-		}).error(function(data,status){
+		},function (error){
 			console.error("failed to load metadata json");
-		})
+   		});
 	};
 	 
 	// Route change handler
